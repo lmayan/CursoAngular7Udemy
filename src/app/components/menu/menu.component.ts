@@ -18,4 +18,8 @@ export class MenuComponent implements OnInit {
     this.texto="Executou CLICK!"
   }
 
+  clicouVoltarTexto(){
+    this.texto="Conteudo variavel (texto)"
+  }
+
 }
