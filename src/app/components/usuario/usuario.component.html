@@ -4,3 +4,23 @@
 <p></p>
 <div>Email Usuario</div>
 <div>{{usuario.email}}</div>
+<p></p>
+<p></p>
+<table border="1">
+    <tr>
+        <th>
+            Nome
+        </th>
+        <th>
+            Email
+        </th>
+    </tr>
+    <tr  *ngFor="let u of usuarios;">
+        <td>
+            {{u.nome}}
+        </td>
+        <td>
+            {{u.email}}
+        </td>
+    </tr>
+</table>
