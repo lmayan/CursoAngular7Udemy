@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Usuario } from '../usuario';
+import { Usuario } from '../models/usuario';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsuarioService {
+
+  public usuarios: Usuario [] = []
 
   constructor() { }
 
@@ -16,19 +18,25 @@ export class UsuarioService {
   }
 
   public listarUsuarios():Usuario[]{
-    return[
-      {
-        nome:"Usuario0",
-        email:"usuario0@gmail.com"
-      },
-      {
-        nome:"Usuario1",
-        email:"usuario1@gmail.com"
-      },
-      {
-        nome:"Usuario2",
-        email:"usuario2@gmail.com"
-      }
-    ]
+    // return [
+    //   {
+    //     nome: "User0",
+    //     email: "email0"
+    //   },
+    //    {
+    //     nome: "User1",
+    //     email: "email1"
+    //   },
+    //   {
+    //     nome: "User2",
+    //     email: "email2"
+    //   }
+    // ]
+    return this.usuarios
+  }
+
+  public saveUser(user: Usuario){
+    this.usuarios.push(user)
+    console.log(this.usuarios)
   }
 }
