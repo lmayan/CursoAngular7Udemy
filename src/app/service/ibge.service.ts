@@ -7,9 +7,9 @@ import { Observable } from 'rxjs';
 })
 export class IbgeService {
 
-  urlMain = 'http://servicodados.ibge.gov.br/api/v1/localidades'
-  consultUF = this.urlMain + '/estados'
-  consultRegioes = this.urlMain + "/regioes"
+  urlMain = 'https://servicodados.ibge.gov.br/api/v1/localidades'
+  consultUF = this.urlMain + '/estados/'
+  consultRegioes = this.urlMain + "/regioes/"
 
   constructor(private http: HttpClient) { }
 

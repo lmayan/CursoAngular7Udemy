@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IbgeService } from '../ibge.service';
+import { IbgeService } from '../../../service/ibge.service';
 
 @Component({
   selector: 'app-uf',

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { IbgeService } from './ibge.service';
 
 @Component({
   selector: 'app-ibge',
