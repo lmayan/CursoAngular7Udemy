@@ -11,6 +11,10 @@ const routes: Routes = [
     path: 'usuario',
     loadChildren: () => import('./components/usuario/usuario.module').then(mod => mod.UsuarioModule)
   },
+  {
+    path: 'ibge',
+    loadChildren: () => import('./components/ibge/ibge.module').then(mod => mod.IbgeModule)
+  },
   { path: '', pathMatch: 'full', redirectTo: '/home' }
 ]
 

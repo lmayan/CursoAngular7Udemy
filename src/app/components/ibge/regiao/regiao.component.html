@@ -1,0 +1,26 @@
+<table border="1">
+    <tr>
+        <th>
+            Id
+        </th>
+        <th>
+            Sigla
+        </th>
+        <th>
+            Nome
+        </th>
+    </tr>
+    <tr  *ngFor="let regiao of listaRegiao;">
+        <td>
+            {{regiao.id}}
+        </td>
+        <td>
+            {{regiao.sigla}}
+        </td>
+        <td>
+            {{regiao.nome}}
+        </td>
+    </tr>
+</table>
+<p></p>
+<button routerLink="/ibge">Voltar</button>
