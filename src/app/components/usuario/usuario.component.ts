@@ -9,7 +9,9 @@ import { UsuarioService } from 'src/app/service/usuario.service';
 })
 export class UsuarioComponent implements OnInit {
 
+  //Variaveis para Template
   cols: any[] = [];
+
   public usuario = new Usuario
   public usuarios: Usuario[] = []
   public text: String = ""

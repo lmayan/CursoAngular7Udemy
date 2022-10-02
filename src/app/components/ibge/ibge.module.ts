@@ -5,7 +5,7 @@ import { IbgeRoutingModule } from './ibge.routing.module';
 import { UfComponent } from './uf/uf.component';
 import { RegiaoComponent } from './regiao/regiao.component';
 import {TableModule} from 'primeng/table';
-
+import {ButtonModule} from 'primeng/button';
 
 
 @NgModule({
@@ -17,6 +17,7 @@ import {TableModule} from 'primeng/table';
   imports: [
     CommonModule,
     TableModule,
+    ButtonModule,
     IbgeRoutingModule
   ]
 })

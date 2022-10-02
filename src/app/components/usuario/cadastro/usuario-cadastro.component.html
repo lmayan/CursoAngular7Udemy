@@ -1,17 +1,20 @@
-<form>
-    <div>
-        <label>Nome</label>
-        <input type="text" name="nome" [(ngModel)]="usuario.nome">
+<div class="grid p-fluid">
+    <div class="col-12 md:col-4">
+        <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input type="text" pInputText [(ngModel)]="usuario.nome" placeholder="Nome do Usuario">
+        </div>
+        <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-send"></i></span>
+            <input type="email" pInputText [(ngModel)]="usuario.email" placeholder="Email do Usuario">
+        </div>
     </div>
     <div>
-        <label>Email</label>
-        <input type="email" name="email" [(ngModel)]="usuario.email">
+        <p></p>
     </div>
-    <div>
-        <button (click)="salvarUser()">Salvar</button>
-    </div>
-    <div>
-        <button routerLink="/usuario">Voltar</button>
+    <div class="p-inputgroup">
+        <button pButton (click)="salvarUser()" label="Salvar"></button>
+        <button pButton routerLink="/usuario" label="Voltar"></button>
     </div>
     {{usuario | json}}
-</form>
+</div>
