@@ -8,14 +8,22 @@ import { IbgeService } from '../../../service/ibge.service';
 })
 export class UfComponent implements OnInit {
 
+  cols: any[] = [];
   listaUF: any = []
   constructor(private ibgeService: IbgeService) { }
 
-  ngOnInit(){
+  ngOnInit() {
     this.getListUF()
+
+    this.cols = [
+      { field: 'id', header: 'ID' },
+      { field: 'sigla', header: 'Sigla' },
+      { field: 'nome', header: 'Nome' }
+    ];
+
   }
 
-  getListUF(){
+  getListUF() {
     this.ibgeService.getListaUF().subscribe(
       response => {
         this.listaUF = response

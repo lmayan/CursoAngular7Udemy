@@ -7,11 +7,19 @@ import { IbgeService } from '../../../service/ibge.service';
 })
 export class RegiaoComponent implements OnInit {
 
+  cols: any[]=[]
   listaRegiao: any[] = []
   constructor(private ibgeService: IbgeService) { }
 
   ngOnInit(){
     this.getListRegiao()
+
+    this.cols = [
+      { field: 'id', header: 'ID' },
+      { field: 'sigla', header: 'Sigla' },
+      { field: 'nome', header: 'Nome' }
+    ];
+
   }
 
   getListRegiao() {

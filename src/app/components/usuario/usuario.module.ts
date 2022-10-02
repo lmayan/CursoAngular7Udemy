@@ -4,6 +4,8 @@ import { UsuarioComponent } from './usuario.component';
 import { UsuarioRoutingModule } from './usuario.routing.module';
 import { UsuarioCadastroComponent } from './cadastro/usuario.cadastro.component';
 import { FormsModule } from '@angular/forms';
+import {TableModule} from 'primeng/table';
+
 
 
 
@@ -15,7 +17,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     UsuarioRoutingModule,
-    FormsModule
+    FormsModule,
+    TableModule
   ]
 })
 export class UsuarioModule { }

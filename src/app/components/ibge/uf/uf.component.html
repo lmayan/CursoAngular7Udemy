@@ -1,30 +1,18 @@
-<table border="1">
-    <tr>
-        <th>
-            Id
-        </th>
-        <th>
-            Sigla
-        </th>
-        <th>
-            Nome
-        </th>
-    </tr>
-    <tr  *ngFor="let estado of listaUF;">
-        <td>
-            {{estado.id}}
-        </td>
-        <td>
-            {{estado.sigla}}
-        </td>
-        <td>
-            {{estado.nome}}
-        </td>
-    </tr>
-</table>
-
-
+<p-table [value]="listaUF">
+    <ng-template pTemplate="header">
+        <tr>
+            <th *ngFor="let col of cols">
+                {{col.header}}
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-uf>
+        <tr>
+            <td *ngFor="let col of cols">
+                    {{uf[col.field]}}
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
 <p></p>
 <button (click)="gerarListaNoConsole()">Listar no Console</button>
-<p></p>
-<button routerLink="/ibge">Voltar</button>
